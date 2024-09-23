@@ -20,12 +20,10 @@ const paragraphElement = document.getElementById("story-paragraph");
 // Function to update the displayed paragraph
 function updateParagraph() {
   paragraphElement.textContent = paragraphs[currentIndex];
+  const delay = times[currentIndex];
   currentIndex = (currentIndex + 1) % paragraphs.length;
-  setInterval(updateParagraph, times[currentIndex]);
+  setTimeout(updateParagraph(), delay);
 }
 
 // Initially display the first paragraph
 updateParagraph();
-
-// Change the paragraph every 5 seconds
-setInterval(updateParagraph, 10000);
