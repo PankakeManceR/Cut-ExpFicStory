@@ -22,7 +22,8 @@ function updateParagraph() {
   paragraphElement.textContent = paragraphs[currentIndex];
   const delay = times[currentIndex];
   currentIndex = (currentIndex + 1) % paragraphs.length;
-  setTimeout(updateParagraph(), delay);
+  setTimeout(0, delay);
+  updateParagraph();
 }
 
 // Initially display the first paragraph
