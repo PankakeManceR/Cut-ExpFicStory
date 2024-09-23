@@ -12,6 +12,8 @@ const paragraphs = [
   "She rocked back in her chair and extended her ankles to hold herself there for a moment. She let the baby fall to the ground with a plastic thud, utterly unconcerned for anything but that sunset. She didn’t even have to fake it, it really took her breath away. A voice she didn’t recognize protested from a few feet away. \“What the… Cut!\”"
 ];
 
+const test = ["A", "B", "C", "D", "E"];
+
 const times = [7000, 1000, 5000, 10000, 10000, 10000, 10000, 10000, 10000, 10000];
 
 let currentIndex = 0;
@@ -19,10 +21,10 @@ const paragraphElement = document.getElementById("story-paragraph");
 
 // Function to update the displayed paragraph
 function updateParagraph() {
-  paragraphElement.textContent = paragraphs[currentIndex];
+  paragraphElement.textContent = test[currentIndex];
   const delay = times[currentIndex];
-  currentIndex = (currentIndex + 1) % paragraphs.length;
-  setTimeout(0, delay);
+  currentIndex = (currentIndex + 1) % test.length;
+  setTimeout(() => {console.log("Displaying Message");}, delay);
   updateParagraph();
 }
 
