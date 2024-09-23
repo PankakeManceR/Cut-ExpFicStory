@@ -25,4 +25,4 @@ function updateParagraph() {
 updateParagraph();
 
 // Change the paragraph every 5 seconds
-setInterval(updateParagraph, 5000);
+setInterval(updateParagraph, 10000);
