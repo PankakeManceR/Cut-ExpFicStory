@@ -24,7 +24,7 @@ function updateParagraph() {
   paragraphElement.textContent = test[currentIndex];
   const delay = times[currentIndex];
   currentIndex = (currentIndex + 1) % test.length;
-  setTimeout(() => {console.log("Displaying Message");}, delay);
+  setTimeout(() => {}, delay);
   updateParagraph();
 }
 
