@@ -14,7 +14,7 @@ const paragraphs = [
 
 const test = ["A", "B", "C", "D", "E"];
 
-const times = [7000, 1000, 5000, 10000, 10000, 10000, 10000, 10000, 10000, 10000];
+const times = [4000, 1000, 5000, 10000, 10000, 10000, 10000, 10000, 10000, 10000];
 
 let currentIndex = 0;
 const paragraphElement = document.getElementById("story-paragraph");
@@ -24,7 +24,7 @@ function updateParagraph() {
   paragraphElement.textContent = test[currentIndex];
   const delay = times[currentIndex];
   currentIndex = (currentIndex + 1) % test.length;
-  setTimeout(updateParagraph();, delay);
+  setTimeout(updateParagraph, delay);
 }
 
 // Initially display the first paragraph
