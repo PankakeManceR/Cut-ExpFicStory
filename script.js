@@ -22,7 +22,7 @@ const paragraphElement = document.getElementById("story-paragraph");
 
 // Function to update the displayed paragraph
 function updateParagraph() {
-  paragraphElement.textContent = paragraphs[currentIndex];
+  paragraphElement.innerHTML = paragraphs[currentIndex];
   const delay = times[currentIndex];
   currentIndex = (currentIndex + 1) % paragraphs.length;
   setTimeout(updateParagraph, delay);
